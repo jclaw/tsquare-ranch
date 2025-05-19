@@ -1,6 +1,31 @@
+:root {
+    --page-background-color: #fff;
+    --primary-text-color: #000;
+    --link-color: #0645ad;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page-background-color: #222;
+        --primary-text-color: #fff;
+        --link-color: #9abfff;
+    }
+}
+
 body {
     font-family: Inter,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     font-size: 1rem;
+    background: var(--page-background-color);
+    color: var(--primary-text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+a:hover {
+    color: color-mix(in srgb, var(--link-color) 50%, var(--primary-text-color));
+}
+a:visited {
+    color: color-mix(in srgb, var(--link-color) 70%, var(--page-background-color));
 }
 
 main {
@@ -21,8 +46,9 @@ main > div {
     }
 }
 
-
 .header-img {
     max-width: 100%;
+    opacity: 0; 
+    transition: opacity 0.1s;
 }
 

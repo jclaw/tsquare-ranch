@@ -7,7 +7,13 @@
   const selectedPhoto = selected[randomIndex];
 
   const imgElement = document.querySelector(".header-img");
+
+  imgElement.addEventListener("load", () => {
+    imgElement.style.opacity = 1;
+  });
+
   imgElement.src = `assets/${selectedPhoto.filename}`;
+
 
   function isWithin60Days(dateStr) {
     const now = new Date();
