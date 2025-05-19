@@ -6,9 +6,19 @@ body {
 main {
     padding: 0 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 800px;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1100px;
     margin-inline: auto;
+}
+
+main > div {
+    padding-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }
 
 
