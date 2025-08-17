@@ -46,10 +46,13 @@ main > div {
     }
 }
 
-.header-img img {
-    max-width: 100%;
+.header-img {
     opacity: 0; 
     transition: opacity 0.1s;
+}
+
+.header-img img {
+    max-width: 100%;
 }
 
 .header-img figcaption {

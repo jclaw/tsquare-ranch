@@ -11,7 +11,7 @@
   const figcaptionElement = headerFigure.querySelector("figcaption");
 
   imgElement.addEventListener("load", () => {
-    imgElement.style.opacity = 1;
+    headerFigure.style.opacity = 1;
   });
 
   imgElement.src = `assets/${selectedPhoto.filename}`;
