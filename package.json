@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "imagemin-cli": "^8.0.0",
-    "imagemin-mozjpeg": "^10.0.0"
-  }
-}
