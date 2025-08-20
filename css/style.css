@@ -47,8 +47,15 @@ main > div {
 }
 
 .header-img {
-    max-width: 100%;
     opacity: 0; 
     transition: opacity 0.1s;
+}
+
+.header-img img {
+    max-width: 100%;
+}
+
+.header-img figcaption {
+    text-align: right;
 }
 

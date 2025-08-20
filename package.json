@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "sharp-cli": "^5.2.0"
+  },
+  "name": "tsquare-ranch",
+  "version": "1.0.0",
+  "description": "Run a simple server with `python3 -m http.server`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-img": "sharp -i \"$npm_config_src\" -o \"{dir}/{name}--web{ext}\" resize 1400 --withoutEnlargement --fit inside --mozjpeg -q 75 --progressive --compressionLevel 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jclaw/tsquare-ranch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jclaw/tsquare-ranch/issues"
+  },
+  "homepage": "https://github.com/jclaw/tsquare-ranch#readme"
+}

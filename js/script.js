@@ -6,15 +6,28 @@
   const randomIndex = Math.floor(Math.random() * selected.length);
   const selectedPhoto = selected[randomIndex];
 
-  const imgElement = document.querySelector(".header-img");
+  const headerFigure = document.querySelector("figure.header-img");
+  const imgElement = headerFigure.querySelector("img");
+  const figcaptionElement = headerFigure.querySelector("figcaption");
 
   imgElement.addEventListener("load", () => {
-    imgElement.style.opacity = 1;
+    headerFigure.style.opacity = 1;
   });
 
-  imgElement.src = `assets/${selectedPhoto.filename}`;
+  imgElement.src = `assets/${selectedPhoto.filename}--web.jpeg`;
 
+  if (selectedPhoto.date) {
+    const date = new Date(selectedPhoto.date);
+    const formattedDate = date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
 
+    figcaptionElement.textContent = formattedDate;
+  }
+
+  
   function isWithin60Days(dateStr) {
     const now = new Date();
     const [year, month, day] = dateStr.split("-").map(Number);
