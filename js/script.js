@@ -14,7 +14,7 @@
     headerFigure.style.opacity = 1;
   });
 
-  imgElement.src = `assets/${selectedPhoto.filename}`;
+  imgElement.src = `assets/${selectedPhoto.filename}--web.jpeg`;
 
   if (selectedPhoto.date) {
     const date = new Date(selectedPhoto.date);
